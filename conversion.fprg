@@ -4,18 +4,24 @@
         <attribute name="name" value=""/>
         <attribute name="authors" value="jpadi"/>
         <attribute name="about" value=""/>
-        <attribute name="saved" value="2020-01-14 02:31:50 PM"/>
+        <attribute name="saved" value="2020-01-14 03:03:36 PM"/>
         <attribute name="created" value="anBhZGk7REVTS1RPUC01Sjg1Q0NSOzIwMjAtMDEtMTQ7MDE6MDg6MjYgUE07MjgyNg=="/>
-        <attribute name="edited" value="anBhZGk7REVTS1RPUC01Sjg1Q0NSOzIwMjAtMDEtMTQ7MDI6MzE6NTAgUE07MjsyOTI5"/>
+        <attribute name="edited" value="anBhZGk7REVTS1RPUC01Sjg1Q0NSOzIwMjAtMDEtMTQ7MDM6MDM6MzYgUE07MzsyOTM0"/>
     </attributes>
     <function name="Main" type="None" variable="">
         <parameters/>
         <body>
-            <output expression="&quot;Please enter a tempature in degrees celsius&quot;" newline="True"/>
-            <declare name="degreesCelsius" type="Real" array="False" size=""/>
-            <input variable="degreesCelsius"/>
-            <output expression="&quot;temperature in degrees fahrenheit&quot;" newline="False"/>
-            <output expression="convertC2F (degreesCelsius)" newline="True"/>
+            <declare name="repeat" type="Boolean" array="False" size=""/>
+            <assign variable="repeat" expression="true"/>
+            <while expression="repeat">
+                <output expression="&quot;Please enter a tempature in degrees celsius&quot;" newline="True"/>
+                <declare name="userInput" type="String" array="False" size=""/>
+                <declare name="degreesCelsius" type="Real" array="False" size=""/>
+                <input variable="userInput"/>
+                <assign variable="degreesCelsius" expression="ToReal (userInput)"/>
+                <output expression="&quot;temperature in degrees fahrenheit&quot;" newline="False"/>
+                <output expression="convertC2F (degreesCelsius)" newline="True"/>
+            </while>
         </body>
     </function>
     <function name="convertC2F" type="Real" variable="degreesFahrenheit">
