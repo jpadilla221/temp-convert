@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="jpadi"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2020-01-14 01:58:10 PM"/>
+        <attribute name="created" value="anBhZGk7REVTS1RPUC01Sjg1Q0NSOzIwMjAtMDEtMTQ7MDE6MDg6MjYgUE07MjgyNg=="/>
+        <attribute name="edited" value="anBhZGk7REVTS1RPUC01Sjg1Q0NSOzIwMjAtMDEtMTQ7MDE6NTg6MTAgUE07MTsyOTMy"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <output expression="&quot;Please enter a tempature in degrees celsius&quot;" newline="True"/>
+            <declare name="degreesCelsius" type="Real" array="False" size=""/>
+            <input variable="degreesCelsius"/>
+            <declare name="degreesFahrenheit" type="Real" array="False" size=""/>
+            <assign variable="degreesFahrenheit" expression="9 * degreesCelsius / 5 + 32"/>
+            <output expression="&quot;temperature in degrees fahrenheit&quot;" newline="False"/>
+            <output expression="degreesFahrenheit" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
